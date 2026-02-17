@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Interactive installation manual for Uponor Vario S Manifold with step-by-step video guides, technical specifications, and multi-language support.">
+    <meta name="keywords" content="Uponor, Vario S, Manifold, Installation Manual, Interactive Guide">
+    <meta name="author" content="Uponor">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Uponor Interactive Manual - Vario S Manifold">
+    <meta property="og:description" content="Step-by-step interactive installation guide with video tutorials">
+    <meta property="og:type" content="website">
+
+    <title>Uponor Interactive Manual - Vario S Manifold</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- LEFT SIDEBAR: Navigation -->
+        <aside class="sidebar-left">
+            <div class="sidebar-header">
+                <div class="brand-logo">
+                    <img src="GF_Logo.png" alt="Company Logo" class="logo-image">
+                </div>
+                <div class="theme-toggle-container">
+                    <label class="switch" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="theme-toggle" aria-label="Dark mode toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="theme-label" id="theme-label">Light</span>
+                </div>
+            </div>
+
+            <!-- New Language Selector Container -->
+            <div id="language-selector-container"></div>
+
+            <div class="sidebar-title" data-i18n="installation_process">Installation Process</div>
+
+            <nav class="nav-menu" role="navigation" aria-label="Installation steps">
+                <ul>
+                    <li class="nav-item active" data-step="2" role="button" tabindex="0" aria-label="Dimensions step">
+                        <img src="Dimensions.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_dimensions">Dimensions</span>
+                    </li>
+                    <li class="nav-item" data-step="3" role="button" tabindex="0" aria-label="Installation step">
+                        <img src="puzzle_mounting.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_installation">Installation</span>
+                    </li>
+                    <li class="nav-item" data-step="4" role="button" tabindex="0" aria-label="Flushing step">
+                        <img src="Flushing.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_flushing">Flushing</span>
+                    </li>
+                    <li class="nav-item" data-step="5" role="button" tabindex="0" aria-label="Pressure test step">
+                        <img src="Pressure-test.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_pressure">Pressure test</span>
+                    </li>
+                    <li class="nav-item" data-step="6" role="button" tabindex="0" aria-label="Operation step">
+                        <img src="operation.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_operation">Operation</span>
+                    </li>
+                    <li class="nav-item" data-step="" role="button" tabindex="0" aria-label="Notes section">
+                        <img src="Notes.svg" alt="" class="nav-icon-img" aria-hidden="true">
+                        <span class="step-label" data-i18n="nav_notes">Notes</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- CENTER STAGE: Visual/GIF Area -->
+        <main class="main-content">
+            <!-- Video Player UI Container -->
+            <div class="video-player-container">
+                <div class="video-wrapper" id="visual-container">
+                    <img id="main-image" style="display: block; max-width: 90%; height: auto; margin: auto;"
+                        src="dimensions.gif">
+                </div>
+            </div>
+            <!-- RIGHT SIDEBAR: Tools -->
+            <div class="step-info">
+                <h2 id="current-step-title">Table of Content</h2>
+                <p class="step-description" id="current-step-desc">Review the cutting table specifications before
+                    proceeding.</p>
+            </div>
+        </main>
+
+        <!-- RIGHT SIDEBAR: Tools -->
+        <aside class="sidebar-right" role="complementary" aria-label="Checklist and specifications">
+            <!-- Top Section: Checklist -->
+            <section class="tool-section checklist-section">
+                <h3 data-i18n="sidebar_checklist"><span class="icon" aria-hidden="true">✓</span> Checklist</h3>
+                <div class="checklist-container" id="checklist-container" role="list">
+                    <!-- Checklist items will be injected via JS -->
+                </div>
+            </section>
+
+            <!-- Bottom Section: Technical Specs -->
+            <section class="tool-section specs-section">
+                <div class="specs-content" id="specs-container" role="list">
+                    <!-- Specs items will be injected via JS -->
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <script src="./translations.js" defer></script>
+    <script src="./i18n.js" defer></script>
+    <script src="./app.js" defer></script>
+
+</body>
+
+</html>
